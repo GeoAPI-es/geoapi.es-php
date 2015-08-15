@@ -41,12 +41,20 @@ De base usaremos el siguiente codigo para poder explicar mejor cada parte.
 * Metodos
 
     La libreria dispone de varios metodos, los cuales se usan para realizar las distintas peticiones. Cada uno de los metodos puede tener 0 o mas parametros, que se usan para,
-    por ejemplo, filtrar o concretar la busqueda.
+    por ejemplo, filtrar o concretar la busqueda. Los metodos reciben un unico argumento del
+    tipo array asociativo, que a su vez debe contener parejas de valores siendo:
+
+    * la clave - una cadena de texto especificando el parametro que se desea enviar
+    * el valor - o bien una cadena de texto o bien un numero que da valor al parametro
+
+    Ejemplos:
 
     ```php
     //
-    $geoapi->comunidades();
-    $geoapi->provincias();
+    $geoapi->comunidades(array());
+    $geoapi->provincias(array(
+        'CCOM' => '08'
+    ));
     ...
     ```
 
@@ -54,7 +62,7 @@ De base usaremos el siguiente codigo para poder explicar mejor cada parte.
 
 ### Como funciona a nivel tecnico
 
-La libreria realiza peticiones `GET` al endpoint y ejecuta un callback (usando `React/Promise`),
+La libreria realiza peticiones `GET` al endpoint y ejecuta un callback (usando `\React\Promise`),
 pasandole como parametros los datos recibidos. De esta manera se consigue un codigo asincrono.
 
 ```php
