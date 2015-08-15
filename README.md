@@ -24,7 +24,9 @@ La libreria tiene 2 partes importantes.
 
 De base usaremos el siguiente codigo para poder explicar mejor cada parte.
 
-    $geoapi = new GeoAPI(); //Nueva instancia de la libreria
+```php
+$geoapi = new GeoAPI(); //Nueva instancia de la libreria
+```
 
 * Configuracion
 
