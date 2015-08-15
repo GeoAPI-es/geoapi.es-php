@@ -1,7 +1,5 @@
 <?php
 
-namespace GeoAPI\GeoAPI;
-
 class GeoAPI {
 
 	private $conf = array(
