@@ -1,0 +1,5 @@
+{
+    "require": {
+        "geoapi.es/php": "~0.0.1"
+    }
+}
