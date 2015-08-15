@@ -61,7 +61,7 @@ class GeoAPI {
 				),
 				'lastResult' => array(
 					'status' => curl_getinfo($curl, CURLINFO_HTTP_CODE),
-					'data' => $data['data']
+					'data' => $data
 				)
 			);
 
