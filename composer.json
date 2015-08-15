@@ -1,0 +1,20 @@
+{
+    "name": "geoapi.es/php",
+    "type": "library",
+    "description": "Libreria en PHP para GeoAPI.es",
+    "keywords": ["geoapi", "españa", "php"],
+    "homepage": "https://github.com/GeoAPI-es/geoapi.es-php",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "react/promise": "~2.0"
+    },
+    "require-dev": {
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Windwalker\\": ""
+        }
+    }
+}
