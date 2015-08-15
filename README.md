@@ -3,6 +3,8 @@ Libreria en PHP para GeoAPI.es
 
 ### Como empezar
 
+Es preferible leer la [documentacion general](https://github.com/GeoAPI-es/geoapi.es-docs) a la par con esta documentacion.
+
 La libreria esta basada en [composer](https://getcomposer.org/), por lo tanto es recomendable usar `composer` para instalarla.
 
 Para instalar <b>geoapi.es-php</b> y sus dependencias, es suficiente con añadir
