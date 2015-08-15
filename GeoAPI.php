@@ -65,7 +65,7 @@ class GeoAPI {
 				)
 			);
 
-			$deferred->resolve($data['data']);
+			$deferred->resolve($data);
 		}
 
 		curl_close($curl);
