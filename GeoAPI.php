@@ -1,6 +1,6 @@
 <?php
 
-namespace GeoAPI;
+namespace GeoAPI\GeoAPI;
 
 class GeoAPI {
 
