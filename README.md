@@ -1,17 +1,17 @@
 # geoapi.es-php
 Libreria en PHP para GeoAPI.es
 
-### Como empezar
+### Cómo empezar
 
-Es preferible leer la [documentacion general](https://github.com/GeoAPI-es/geoapi.es-docs) a la par con esta documentacion.
+Es preferible leer la [documentación general](https://github.com/GeoAPI-es/geoapi.es-docs) a la par con esta documentación.
 
-La libreria esta basada en [composer](https://getcomposer.org/), por lo tanto es recomendable usar `composer` para instalarla.
+La librería esta basada en [composer](https://getcomposer.org/), por lo tanto es recomendable usar `composer` para instalarla.
 
 Para instalar <b>geoapi.es-php</b> y sus dependencias, es suficiente con añadir
 
     "geoapi.es/php": "~0.0.1"
 
-en la seccion `require` de tu archivo `composer.json`.
+en la sección `require` de tu archivo `composer.json`.
 
 Si no estas manejando tu proyecto con `composer` o simplemente quieres hacer una prueba rapida,
 puedes ejecutar
@@ -20,18 +20,18 @@ puedes ejecutar
 
 ### Como funciona a nivel funcional
 
-La libreria tiene 2 partes importantes.
+La librería tiene 2 partes importantes.
 
-De base usaremos el siguiente codigo para poder explicar mejor cada parte.
+De base usaremos el siguiente código para poder explicar mejor cada parte.
 
 ```php
-$geoapi = new GeoAPI(); //Nueva instancia de la libreria
+$geoapi = new GeoAPI(); //Nueva instancia de la librería
 ```
 
 * Configuracion
 
-    El metodo `setConfig` sirve para definir los parametros que usara la libreria para hacer las
-    peticiones. Dichos parametros estan explicados en la [documentacion general](https://github.com/GeoAPI-es/geoapi.es-docs).
+    El método `setConfig` sirve para definir los parámetros que usará la librería para hacer las
+    peticiones. Dichos parámetros están explicados en la [documentación general](https://github.com/GeoAPI-es/geoapi.es-docs).
 
     ```php
     //
@@ -40,14 +40,14 @@ $geoapi = new GeoAPI(); //Nueva instancia de la libreria
     ...
     ```
 
-* Metodos
+* Métodos
 
-    La libreria dispone de varios metodos, los cuales se usan para realizar las distintas peticiones. Cada uno de los metodos puede tener 0 o mas parametros, que se usan para,
-    por ejemplo, filtrar o concretar la busqueda. Los metodos reciben un unico argumento del
+    La librería dispone de varios métodos, los cuales se usan para realizar las distintas peticiones. Cada uno de los métodos puede tener 0 o más parámetros, que se usan para,
+    por ejemplo, filtrar o concretar la busqueda. Los métodos reciben un único argumento del
     tipo array asociativo, que a su vez debe contener parejas de valores siendo:
 
-    * la clave - una cadena de texto especificando el parametro que se desea enviar
-    * el valor - o bien una cadena de texto o bien un numero que da valor al parametro
+    * la clave - una cadena de texto especificando el parámetro que se desea enviar
+    * el valor - o bien una cadena de texto o bien un numero que da valor al parámetro
 
     Ejemplos:
 
@@ -60,12 +60,12 @@ $geoapi = new GeoAPI(); //Nueva instancia de la libreria
     ...
     ```
 
-    Todos los metodos disponibles, asi como sus parametros, estan especificados en la [documentacion general](https://github.com/GeoAPI-es/geoapi.es-docs).
+    Todos los métodos disponibles, asi como sus parámetros, están especificados en la [documentación general](https://github.com/GeoAPI-es/geoapi.es-docs).
 
-### Como funciona a nivel tecnico
+### Como funciona a nivel técnico
 
-La libreria realiza peticiones `GET` al endpoint y ejecuta un callback (usando `\React\Promise`),
-pasandole como parametros los datos recibidos. De esta manera se consigue un codigo asincrono.
+La librería realiza peticiones `GET` al endpoint y ejecuta un callback (usando `\React\Promise`),
+pasándole como parámetros los datos recibidos. De esta manera se consigue un código asíncrono.
 
 ```php
 $geoapi->comunidades(array(
