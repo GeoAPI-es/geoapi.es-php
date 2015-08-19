@@ -3,7 +3,7 @@
 class GeoAPI {
 
 	private $conf = array(
-		'url' => 'http://geoapi.es/API/',
+		'url' => 'http://apiv1.geoapi.es/',
 		'type' => 'JSON',
 		'key' => '',
 		'sandbox' => 0
@@ -19,7 +19,7 @@ class GeoAPI {
 			'data' => array()
 		)
 	);
-	
+
 	public function setConfig($key, $value){
 		$this->conf[$key] = $value;
 	}
@@ -31,13 +31,13 @@ class GeoAPI {
 	public function getLastResult(){
 		return $this->$_data['lastResult'];
 	}
-	
+
 	private function _call($accion, $params, $deferred){
 		$params = array_merge($params, $this->conf);
 		unset($params['url']);
-		
+
 		$curl = curl_init();
-		
+
 		curl_setopt_array($curl, array(
 			CURLOPT_TIMEOUT => 15,
 			CURLOPT_RETURNTRANSFER => 1,
@@ -45,9 +45,9 @@ class GeoAPI {
 			CURLOPT_HTTPHEADER => array("Cache-Control: max-age=0", "Accept-Charset: utf-8;"),
 			CURLOPT_URL => sprintf("%s%s?%s", $this->conf['url'], $accion, http_build_query($params))
 		));
-		
+
 		$resp = curl_exec($curl);
-		
+
 		if(curl_errno($curl) || curl_getinfo($curl, CURLINFO_HTTP_CODE) != 200){
 			$deferred->reject($resp);
 			echo "Error: " . curl_error($resp);
