@@ -50,7 +50,7 @@ class GeoAPI {
 
 		if(curl_errno($curl) || curl_getinfo($curl, CURLINFO_HTTP_CODE) != 200){
 			$deferred->reject($resp);
-			echo "Error: " . curl_error($resp);
+			echo "Error: " . curl_error($curl);
 		}else{
 			$data = json_decode($resp, true);
 
